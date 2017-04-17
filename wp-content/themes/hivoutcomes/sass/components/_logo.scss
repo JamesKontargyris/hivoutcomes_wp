@@ -1,0 +1,11 @@
+.logo {
+  //@include span-columns(8);
+  @include rem('max-width', 200px);
+  display: block;
+  //margin:0 auto;
+
+  @include media($l-up) {
+    @include span-columns(4);
+    @include rem('max-width', 300px);
+  }
+}

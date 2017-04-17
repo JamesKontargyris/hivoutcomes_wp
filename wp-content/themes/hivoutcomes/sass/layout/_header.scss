@@ -1,0 +1,39 @@
+.header {
+  @include lr-pad(10px);
+  background-color: white;
+  z-index: z('high');
+
+  &__inner {
+    @include outer-container();
+    @include tb-pad($vr);
+    height:100%;
+
+    @include media($l-up) {
+      @include tb-pad(($vr * 3));
+    }
+  }
+
+  &__nav {
+    position: fixed;
+    display:none;
+    top:0;
+    left:0;
+    @include size(100% 100%);
+    min-height:100%;
+    background-color: white;
+
+    @include media($m-up) {
+      position:relative;
+      @include span-columns(12, 'flex');
+      display:none;
+
+      //flex-direction: column;
+      //align-items: stretch;
+      //align-content: space-between;
+    }
+
+    @include media($l-up) {
+      @include span-columns(8, 'flex');
+    }
+  }
+}

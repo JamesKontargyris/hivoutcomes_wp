@@ -1,0 +1,6 @@
+.site-info {
+  padding:20px;
+  @include font-size(14, 21);
+  color: darken($light-grey, 25%);
+  text-align: center;
+}

@@ -1,0 +1,107 @@
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size * 0.90;
+  line-height: $base-line-height * 0.90;
+
+  @include media($l-up) {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin: 0 0 $base-spacing;
+  color:$red;
+}
+
+h1 {
+  text-align: center;
+  @include font-size(28, 32);
+
+  @include media($l-up) {
+    letter-spacing: -1px;
+    @include font-size(36, 42);
+  }
+}
+
+h3 {
+  color:$dark-grey;
+  text-transform:uppercase;
+  text-align: center;
+  @include font-size(18, 21);
+
+  @include media($l-up) {
+    letter-spacing: 3px;
+  }
+}
+
+h4 {
+  color:$red;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  @include font-size(16, 21);
+}
+
+p {
+  margin: 0 0 $base-spacing;
+}
+
+a:link,
+a:visited {
+  color: $action-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+}
+
+hr {
+  border:0;
+  width:60px;
+  height:7px;
+  background-color: $red;
+  margin: $base-spacing * 1.5 auto;
+}
+
+ul, ol {
+  margin-left:0px;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+.footnote__reference,
+.footnote__text {
+  color:$dark-grey;
+  @include font-size(13px, 16px);
+}
+
+.footnote__text {
+  margin-bottom:$base-spacing;
+}
+
+.footnote__reference {
+  vertical-align: super;
+  font-size: 75%;
+}

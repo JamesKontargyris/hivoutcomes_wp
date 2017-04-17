@@ -10,15 +10,15 @@
  */
 
 ?>
+    <?php dynamic_sidebar('content-area-footer'); ?>
 
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'hivoutcomes' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'hivoutcomes' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'hivoutcomes' ), 'hivoutcomes', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+			<?php wp_nav_menu( array( 'theme_location' => 'menu-footer', 'menu_id' => 'footer-menu', 'depth' => '1' ) ); ?>
+			<?php dynamic_sidebar('site-footer'); ?>
+        </div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

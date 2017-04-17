@@ -1,0 +1,23 @@
+.icon {
+  vertical-align: middle;
+}
+
+.icon--right {
+  float:right;
+}
+
+.icon--xsmall {
+  @include size(16px);
+}
+
+.icon--small {
+  @include size(24px);
+}
+
+.icon--medium {
+  @include size(32px);
+}
+
+.icon--large {
+  @include size(48px);
+}

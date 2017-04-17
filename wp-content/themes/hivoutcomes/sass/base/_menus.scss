@@ -1,0 +1,92 @@
+.main-navigation {
+  @include clearfix;
+  float:none;
+  padding:15px;
+  max-width: 880px;
+  margin:0 auto;
+  background:linear-gradient(to bottom, $red 40%, darken($red, 10%)) $red;
+  @include font-size(16, 18);
+  font-weight: bold;
+  text-align: center;
+
+  &.toggled #primary-menu {
+    display:block;
+  }
+
+  @include media($l-up) {
+    border-radius: $base-border-radius $base-border-radius 0 0;
+  }
+
+  #primary-menu {
+    display:none;
+    @include font-size(18, 20);
+    margin:0;
+    li {
+      float:none !important;
+      margin:$base-spacing 20px 0;
+    }
+    @include media($l-up) {
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      li {
+        margin:0;
+        &:not(:last-of-type) {
+          margin-right:35px;
+        }
+      }
+    }
+    a:link,
+    a:visited {
+      text-shadow:0 -1px 0 darken($red, 30%);
+      &:hover {
+        text-shadow: none;
+      }
+    }
+  }
+
+  a:link,
+  a:visited {
+    color: $white;
+    text-decoration: none;
+    transition: color $base-duration $base-timing;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: shade($action-color, 25%);
+    }
+  }
+}
+
+.menu-toggle, .menu-toggle:hover {
+  display:block;
+  margin:0 auto;
+  @include font-size(14, 14);
+  text-transform: uppercase;
+  background:none;
+  border:0;
+  text-shadow: none;
+  box-shadow: none;
+  color:rgba(white, 0.9);
+  text-shadow:0 -1px 0 darken($red, 30%);
+
+  @include media($l-up) {
+    display:none;
+  }
+}
+
+#footer-menu {
+  display:inline-block;
+  max-width:880px;
+  margin:0 auto $small-spacing;
+  li {
+    float:left;
+    &:not(:last-of-type) {
+      padding-right:10px;
+      border-right:1px solid $light-grey;
+      margin-right:10px;
+    }
+  }
+}

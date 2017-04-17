@@ -1,0 +1,19 @@
+* {
+  z-index: z('default');
+}
+.container {
+  @include outer-container();
+}
+
+body {
+  background: linear-gradient(to bottom, white 0, rgba(255,255,255,0) 400px), url('img/bg.png') top left repeat;
+}
+
+// Used to toggle elements
+.show {
+  display:block !important;
+}
+
+.hide {
+  display:none !important;
+}
