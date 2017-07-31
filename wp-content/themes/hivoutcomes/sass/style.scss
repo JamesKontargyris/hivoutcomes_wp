@@ -31,6 +31,7 @@
 'base/underscores',
 'base/base',
 'base/typography',
+'base/helpers',
 'base/menus';
 
 /// Components (modules)
@@ -39,9 +40,10 @@
 'components/icon',
 'components/buttons',
 'components/contact_form_7',
+'components/news-extract',
 'components/widgets';
 
 /// Page-specific stylesheets
-//@import
-//'pages/home',
+@import
+'pages/news';
 //'pages/contact';

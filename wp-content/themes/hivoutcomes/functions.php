@@ -48,6 +48,10 @@ function hivoutcomes_setup() {
 		'menu-footer' => esc_html__( 'Footer', 'hivoutcomes' ),
 	) );
 
+	// Add image thumbnail sizes
+	add_image_size('news-extract', 500, 300, true);
+	add_image_size('news-banner', 1000, 500, true);
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.

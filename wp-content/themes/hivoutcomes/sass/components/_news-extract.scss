@@ -1,0 +1,45 @@
+.news-extract {
+  @include clearfix;
+}
+
+.news-extract__image-link {
+
+  &:hover {
+    img {
+      opacity: 0.7;
+    }
+  }
+
+  @include media($l-up) {
+    @include clearfix;
+    float: left;
+  }
+}
+
+.news-extract__image {
+  display: block;
+  margin:0 auto $base-spacing;
+
+  @include media($l-up) {
+    max-width:20rem;
+    margin-right:2rem;
+    margin-bottom:0;
+  }
+}
+
+.news-extract__details {
+  display: block;
+  overflow: hidden;
+}
+
+.news-extract__extract {
+  @include font-size(16, 21);
+}
+
+.news-extract__meta {
+  text-transform: uppercase;
+  @include font-size(18, 21);
+  font-weight: 700;
+  color:$dark-grey;
+  margin-bottom:$small-spacing;
+}

@@ -18,8 +18,6 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
-  font-size: $base-font-size;
-  line-height: $heading-line-height;
   margin: 0 0 $base-spacing;
   color:$red;
 }
@@ -31,6 +29,15 @@ h1 {
   @include media($l-up) {
     letter-spacing: -1px;
     @include font-size(36, 42);
+  }
+}
+
+h2 {
+  @include font-size(21, 28);
+
+  @include media($l-up) {
+    letter-spacing: -1px;
+    @include font-size(28, 32);
   }
 }
 
